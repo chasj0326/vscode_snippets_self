@@ -30,9 +30,9 @@
       "type Story = StoryObj<typeof meta>",
       "\n",
       "export const Default: Story = {",
-      "\trender: (args) => (",
-      "\t\t<$2 {...args} />",
-      "\t),",
+      "\trender: (args) => {",
+      "\t\treturn <$2 {...args} />",
+      "\t}",
       "}"
     ],
     "description": "✨TSstorybookReact"
