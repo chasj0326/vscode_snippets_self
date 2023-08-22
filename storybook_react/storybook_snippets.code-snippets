@@ -1,0 +1,40 @@
+{
+  "Storybook By JS": {
+    "prefix": ["strj", "storyjs"],
+    "body": [
+      "export default {",
+      "\ttitle: '$1'",
+      "\tcomponent: $2",
+      "\targs: {}",
+      "\targTypes: {}",
+      "}",
+      "\n",
+      "export const Default = (args) => {",
+      "\treturn <$2 {...args} />",
+      "}"
+    ],
+    "description": "✨JSstorybookReact"
+  },
+  "Storybook By TS": {
+    "prefix": ["strt", "storyts"],
+    "body": [
+      "import type {Meta, StoryObj} from '@storybook/react'",
+      "const meta = {",
+      "\ttitle: '$1'",
+      "\tcomponent: $2",
+      "\targs: {}",
+      "\targTypes: {}",
+      "} satisfies Meta<typeof $2>",
+      "\n",
+      "export default meta",
+      "type Story = StoryObj<typeof meta>",
+      "\n",
+      "export const Default: Story = {",
+      "\trender: (args) => (",
+      "\t\t<$2 {...args} />",
+      "\t),",
+      "}"
+    ],
+    "description": "✨TSstorybookReact"
+  }
+}
